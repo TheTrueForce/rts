@@ -1,0 +1,22 @@
+RTS, similar to Mindustry and SC2.
+The idea is not very original; this is as a self-set exercise.
+
+-- gameplay design choices --
+Top-down, like Mindustry, as opposed to SC2's isometric-ish camera.
+    This will reduce the renderer to 2D, reducing complexity.
+Make both tower-defense and unit-based styles viable.
+Mix of both supply-chain(Min) and universal supplies(SC2).
+Background and Buildings are grid-based; locked to integer coordinates, and only have four possible facing directions.
+Units are not grid-based; using floats or doubles for positions, and rotations.
+    Unified coordinate system: unit position (4.0, 10.0) == top left of Grid (4, 10)
+
+-- implementation design choices --
+Make It Modular; so that (for example) the renderer can be swapped out, or the controls, without affecting the other components.
+Make It Portable and cross-platform. This seems to indicate Java or Python.
+    C/C++ will incur extra work in writing compatibility layers, and will require compiling different executables for diferent OSs.
+    If GPU acceleration is supported(assuming it's relevant at all), make it an option.
+Use Version Control. This is a habit that I really need to get into; it's saved my bacon before, I need to keep using it.
+Use Semantic Versioning.
+    A.B, where: A is incremented for a major change, such as adding a feature, and
+                B is incremented for a minor change
+    Where one number changes, the ones following it are reset to zero, except for C, which is never reset.
