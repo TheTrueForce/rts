@@ -1,0 +1,17 @@
+----global properties
+max health
+max shields
+armor
+move type
+base move speed
+unit ID
+weapons/tools carried
+cargo space
+sight range
+
+----specific properties
+current health
+current shields
+armor bonus
+speed bonus
+current position
